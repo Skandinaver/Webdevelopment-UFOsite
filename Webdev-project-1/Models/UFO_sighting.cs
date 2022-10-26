@@ -8,10 +8,10 @@ namespace Webdev_project_1.Models
     public class UFO_sighting
     {
         public int ID { get; set; }
-        public int? CategoryID { get; set; }
+        public int CategoryID { get; set; }
         public Category? Category { get; set; }
         [Display(Name = "Subject")]
-        public string? UFO_title { get; set; }
+        public string UFO_title { get; set; }
         [Column(TypeName = "decimal(18, 2)")]
         [Display(Name = "Longitude")]
         public  decimal longitude { get; set; }
