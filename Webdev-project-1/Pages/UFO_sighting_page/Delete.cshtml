@@ -1,0 +1,58 @@
+﻿@page
+@model Webdev_project_1.Pages.UFO_sighting_page.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>UFO_sighting</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UFO_sighting.Category)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UFO_sighting.Category.ID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UFO_sighting.UFO_title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UFO_sighting.UFO_title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UFO_sighting.longitude)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UFO_sighting.longitude)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UFO_sighting.latitude)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UFO_sighting.latitude)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UFO_sighting.Observation_date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UFO_sighting.Observation_date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UFO_sighting.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UFO_sighting.Description)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="UFO_sighting.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,55 @@
+﻿@page
+@model Webdev_project_1.Pages.UFO_sighting_page.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>UFO_sighting</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UFO_sighting.Category)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UFO_sighting.Category.ID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UFO_sighting.UFO_title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UFO_sighting.UFO_title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UFO_sighting.longitude)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UFO_sighting.longitude)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UFO_sighting.latitude)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UFO_sighting.latitude)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UFO_sighting.Observation_date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UFO_sighting.Observation_date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UFO_sighting.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UFO_sighting.Description)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.UFO_sighting?.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

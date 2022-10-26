@@ -1,0 +1,62 @@
+﻿@page
+@model Webdev_project_1.Pages.UFO_sighting_page.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>UFO_sighting</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="UFO_sighting.Category" class="control-label"></label>
+                <select asp-for="UFO_sighting.CategoryID" class ="form-control" 
+                asp-items="@Model.CategoryNameSL"><option value="">-- Select Category --</option>
+                </select>
+                <span asp-validation-for="UFO_sighting.CategoryID" class="text-danger" />
+            </div>
+            <div class="form-group">
+                <label asp-for="UFO_sighting.UFO_title" class="control-label"></label>
+                <input asp-for="UFO_sighting.UFO_title" class="form-control" />
+                <span asp-validation-for="UFO_sighting.UFO_title" class="text-danger">
+                </span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UFO_sighting.longitude" class="control-label"></label>
+                <input asp-for="UFO_sighting.longitude" class="form-control" />
+                <span asp-validation-for="UFO_sighting.longitude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UFO_sighting.latitude" class="control-label"></label>
+                <input asp-for="UFO_sighting.latitude" class="form-control" />
+                <span asp-validation-for="UFO_sighting.latitude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UFO_sighting.Observation_date" class="control-label"></label>
+                <input asp-for="UFO_sighting.Observation_date" class="form-control" />
+                <span asp-validation-for="UFO_sighting.Observation_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UFO_sighting.Description" class="control-label"></label>
+                <input asp-for="UFO_sighting.Description" class="form-control" />
+                <span asp-validation-for="UFO_sighting.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
