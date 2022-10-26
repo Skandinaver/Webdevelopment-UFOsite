@@ -10,13 +10,17 @@ namespace Webdev_project_1.Models
         public int ID { get; set; }
         public int? CategoryID { get; set; }
         public Category? Category { get; set; }
+        [Display(Name = "Subject")]
         public string? UFO_title { get; set; }
         [Column(TypeName = "decimal(18, 2)")]
+        [Display(Name = "Longitude")]
         public  decimal longitude { get; set; }
+        [Display(Name = "Latitude")]
         [Column(TypeName = "decimal(18, 2)")]
         public decimal latitude { get; set; }
 
         [DataType(DataType.Date)]
+        [Display(Name = "Observation Date")]
         public DateTime Observation_date { get; set; }
         public string? Description { get; set; }
 
