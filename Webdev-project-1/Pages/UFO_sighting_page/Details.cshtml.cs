@@ -27,8 +27,7 @@ namespace Webdev_project_1.Pages.UFO_sighting_page
             {
                 return NotFound();
             }
-
-            var ufo_sighting = await _context.UFO_sightings.FirstOrDefaultAsync(m => m.ID == id);
+            var ufo_sighting = await _context.UFO_sightings.Include(c => c.Category).FirstOrDefaultAsync(m => m.ID == id);
             if (ufo_sighting == null)
             {
                 return NotFound();

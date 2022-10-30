@@ -44,7 +44,7 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
 
     var context = services.GetRequiredService<UFO_context>();
-    context.Database.EnsureDeleted();
+    //context.Database.EnsureDeleted();
     context.Database.EnsureCreated();
     SeedData.Initialize(services);
     // DbInitializer.Initialize(context);

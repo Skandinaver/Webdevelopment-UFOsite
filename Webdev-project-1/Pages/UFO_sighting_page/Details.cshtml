@@ -8,20 +8,14 @@
 <h1>Details</h1>
 
 <div>
-    <h4>UFO_sighting</h4>
+    <h4>@Html.DisplayFor(model => model.UFO_sighting.UFO_title)</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.UFO_sighting.Category)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.UFO_sighting.Category.ID)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.UFO_sighting.UFO_title)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.UFO_sighting.UFO_title)
+            @Html.DisplayFor(model => model.UFO_sighting.Category.Category_name)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.UFO_sighting.longitude)
