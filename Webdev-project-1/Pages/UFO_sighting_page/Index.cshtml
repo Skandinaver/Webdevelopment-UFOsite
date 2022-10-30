@@ -59,9 +59,9 @@
                 @Html.DisplayFor(modelItem => item.Observation_date)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                    <button type="button" class="btn btn-info btn-sm" style="margin: 1px"><a asp-page="./Edit" asp-route-id="@item.ID" style="color: white; text-decoration: none">Edit</a></button>
+                    <button type="button" class="btn btn-secondary btn-sm" style="margin: 1px"><a asp-page="./Details" asp-route-id="@item.ID" style="color: white; text-decoration: none">Details</a></button>
+                    <button type="button" class="btn btn-danger btn-sm" style="margin: 1px"><a asp-page="./Delete" asp-route-id="@item.ID" style="color: white; text-decoration: none">Delete</a></button>
             </td>
         </tr>
 }
