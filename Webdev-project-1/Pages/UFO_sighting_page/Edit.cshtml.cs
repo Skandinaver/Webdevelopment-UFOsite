@@ -55,7 +55,7 @@ namespace Webdev_project_1.Pages.UFO_sighting_page
 
             if(await TryUpdateModelAsync<UFO_sighting>(
                 ufoToUpdate,
-                "UFO sighting",
+                "UFO_sighting",
                 s => s.ID, s => s.CategoryID, s => s.UFO_title, s => s.longitude, s => s.latitude, s => s.Observation_date, s => s.Description)) 
             {
                 await _context.SaveChangesAsync();
